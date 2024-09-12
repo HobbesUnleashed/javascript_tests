@@ -50,11 +50,8 @@ main {
 }
 
 .nav-items {
-    background-color: blue;
     width:fit-content;
     list-style-type: none;
-    color: #fff;
-    font-size: 2rem;
 }
 
 .setup {
@@ -80,6 +77,17 @@ main {
     justify-self: end;
     height:fit-content;
     margin-right: 20px;
+}
+
+button {
+    height: 100%;
+    background-color: blue;
+    color: #fff;
+    font-size: 2rem;
+    border-radius: 8px;
+    padding: 5px;
+    border: outset 2px black;
+    box-shadow: 0.3em 0.3em 0.5em lightblue;
 }
 
 .copyright {
