@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 90%;
+    height: 100dvh;
+    margin:auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    background: url(../images/pool-hall.jpg) no-repeat center center/cover;
+    color: #fff;
+    position: relative;
+}
+
+header {
+    text-align: center;
+    align-self: center;
+}
+
+.brand {
+    font-size: 3rem;
+}
+
+.slogan {
+    font-size: 2rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 450px 1fr;
+    align-content:start center;
+    height: 100%;
+}
+
+.logo {
+    align-content: flex-end;
+    height: 125%;
+}
+
+.logo > img {
+    height: 400px;
+}
+
+.nav {
+    display: grid;
+    height:100%;
+}
+
+.nav-items {
+    background-color: blue;
+    width:fit-content;
+    list-style-type: none;
+    color: #fff;
+    font-size: 2rem;
+}
+
+.setup {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-self: start;
+    height:fit-content;
+    margin-left: 20px;
+}
+
+.timers {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-self: center;
+    align-self: center;
+    height:fit-content;
+}
+
+.tools {
+    display: grid;
+    grid-template-columns: 1fr;
+    align-self: flex-end;
+    justify-self: end;
+    height:fit-content;
+    margin-right: 20px;
+}
+
+.copyright {
+    height: 1.5em;
+    text-align: center;
+    justify-self: center;
+    align-self: flex-end;
+    font-size: xx-small;
+}
