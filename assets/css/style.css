@@ -1,4 +1,4 @@
-* {
+ * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
@@ -10,7 +10,9 @@ body {
     margin:auto;
     display: grid;
     grid-template-columns: 1fr;
-    background: url(../images/pool-hall.jpg) no-repeat center center/cover;
+    background-image: url(../images/pool-hall.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #fff;
     position: relative;
 }
@@ -96,4 +98,364 @@ button {
     justify-self: center;
     align-self: flex-end;
     font-size: xx-small;
+} 
+
+
+
+
+/* Masonry grid page */
+
+/* Import Google Font - Raleway 300 & 700 */
+/* @import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
+
+
+/* Font and color variables 
+
+:root {
+/* Fonts 
+--sans-serif: 'Raleway', sans-serif;
+--font-light: 300;
+--font-bold: 700;
+
+/* Colors 
+--black: #353535;
+--gray: #4f4f4f;
+--medium-gray: #737373;
+--light-gray: #c4c4c4;
+--orange: #f96855;
+
+/* Semantic color names 
+--accent: orange;
+
+--body-background: black;
+--menu-background: gray;
+
+--main-font-color: var(--light-gray);
+--menu-active-color: var(--light-gray);
+--menu-font-color: var(--medium-gray);
+--link-color: var(--accent);
 }
+
+
+
+/* General styles 
+
+
+* { box-sizing: border-box; }
+
+
+/* Body is a flexbox so that the sidebar will flex too 
+body {
+  background: var(--body-background);
+  color: var(--main-font-color);
+  font-family: var(--sans-serif);
+  font-size: 1.2rem;
+  line-height: 1.45;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+
+/* Navigation 
+
+.sidebar {
+  background: var(--menu-background);
+  flex: 1 1 20%;       /* Flexes to 20% of the screen 
+  min-width: 300px;
+  padding: 3em;
+}
+
+.logo {
+  text-transform: uppercase;
+  margin-bottom: 2em;
+  
+  @media (min-width: 1500px) {
+    margin-bottom: 5em;
+  }
+  
+  span {
+    font-weight: var(--font-bold);
+  }
+}
+
+.nav-item {
+  color: var(--menu-font-color);
+  text-decoration: none;
+  font-size: 1.7rem;
+  display: inline-block;
+  margin-right: 2em;
+  @media (min-width: 1500px) {
+    display: block;
+    margin: 7vh 0;
+  }
+  
+  &.active {
+    color: var(--menu-active-color);
+  }
+}
+
+
+
+/* Main Content area 
+
+.main-content {
+  padding: 10%;
+  flex: 1 1 80%;      /* Flexes to 80% of the screen 
+  min-height: 100vh;
+
+}
+
+
+
+/* Portfolio 
+
+/* Setup the portfolio container - grid, height 
+.portfolio {
+    display: grid;
+    height: 100%;
+
+    /* Create the number of rows and columns allowed 
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+
+    /* name the areas of my grid 
+    grid-template-areas: 
+    "top    top    top    top    top"
+    "left   popout popout popout right"
+    "left   popout popout popout right"
+    "left   popout popout popout right"
+    "left   popout popout popout right"
+    "bottom bottom bottom bottom bottom";
+    gap: 20px;
+}
+
+
+/* Setup the items on the screen to have shared properties 
+.portfolio-item {
+    background: var(--accent);
+    color: var(--body-background);
+    font-weight: var(--font-bold);
+    /* Flex, centered on both axis 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Nested css for a property 
+    /* Same as .portfolio-item.medium {} 
+    &.medium {
+        grid-row: span 2;    /* Spans two rows - doubles the height 
+        grid-column: span 2;    /* Spans two columns - doubles the width 
+    }
+
+    &.large {
+        grid-row: span 3;
+        grid-column: span 3;
+    }
+
+    &.tall {
+        grid-row: span 3;
+        grid-column: span 2;
+    }
+
+    &.wide {
+        grid-row: span 2;
+        grid-column: span 3;
+    }
+}
+
+.one {
+  background-image: url(../images/pool-hall.jpg);
+  background-size: cover;
+  background-position: top left;
+  background-color: var(--black);
+  background-blend-mode: screen;
+  color: var(--light-gray);
+
+  /* Cause the image to popout and fill the popout area 
+  &:hover{
+    grid-area: popout;
+  }
+}
+
+.two {
+  background-image: url(../images/pool-hall.jpg);
+  background-size: cover;
+  background-position: top right;
+  background-color: var(--black);
+  background-blend-mode: screen;
+  color: var(--light-gray);
+
+  &:hover{
+    grid-area: popout;
+  }
+}
+
+.three {
+  background-image: url(../images/pool-hall.jpg);
+  background-size: cover;
+  background-position: left;
+  background-color: var(--black);
+  background-blend-mode: screen;
+  color: var(--light-gray);
+
+  &:hover{
+    grid-area: popout;
+  }
+}
+
+.four {
+  background-image: url(../images/pool-hall.jpg);
+  background-size: cover;
+  background-position: center;
+  background-color: var(--black);
+  background-blend-mode: screen;
+  color: var(--light-gray);
+
+  &:hover{
+    grid-area: popout;
+  }
+}
+
+.five {
+  background-image: url(../images/pool-hall.jpg);
+  background-size: cover;
+  background-position: bottom right;
+  background-color: var(--black);
+  background-blend-mode: screen;
+  color: var(--light-gray);
+
+  &:hover{
+    grid-area: popout;
+  }
+}
+
+.six {
+  background-image: url(../images/pool-hall.jpg);
+  background-size: cover;
+  background-position: bottom left;
+  background-color: var(--black);
+  background-blend-mode: screen;
+  color: var(--light-gray);
+
+  &:hover{
+    grid-area: popout;
+  }
+}
+
+.small > img,
+.medium > img,
+.large > img,
+.tall > img,
+.wide > img {
+  width: 50%;
+  justify-self: center;
+  align-self: center;
+}
+
+.small > img:hover,
+.medium > img:hover,
+.large > img:hover,
+.tall > img:hover,
+.wide > img:hover {
+  grid-row(2 / span 4);
+  grid-column: (2 / span 3);
+} */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Portfolio */
+
+/* .portfolio {
+  display: grid;
+  height: 100%;
+  grid-template-rows: repeat(8, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: 20px;
+}
+
+.portfolio-item {
+  background: var(--accent);
+  color: var(--light-gray);
+  font-weight: var(--font-bold);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  /* Refractored the code a little from the video.
+   Moved these from the .two, thought it made
+   more sense like this. 
+  font-size: 1.5em;
+  background-size: cover;
+  background-position: top left;
+  transition: all ease-in-out 300ms;
+  position: relative;
+  z-index: 10;
+  
+  &.small {
+    grid-row: span 1;
+    grid-column: span 1;
+  }
+  
+  &.medium {
+    grid-row: span 2;
+    grid-column: span 2;
+  }
+  
+  &.large {
+    grid-row: span 3;
+    grid-column: span 3;
+  }
+  
+  &.tall {
+    grid-row: span 3;
+    grid-column: span 2;
+  }
+  
+  &.wide {
+    grid-row: span 2;
+    grid-column: span 3;
+  }
+    
+  &:hover {
+    color: white;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.85);
+  }
+}
+
+.two {
+  background-image: url(//unsplash.it/800/600);
+  
+  &::before {
+    content: '';
+    display: block;
+    background: var(--black);
+    opacity: 0.8;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transition: all ease-in-out 300ms;
+    z-index: -1;
+  }
+  
+  &:hover::before {
+    opacity: 0.2;
+  }
+} */
+
